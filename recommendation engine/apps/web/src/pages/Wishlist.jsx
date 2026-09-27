@@ -1,0 +1,1 @@
+import React,{useEffect,useState} from "react";import {api} from "../api";export default function Wishlist(){const [x,setX]=useState([]);useEffect(()=>{api.get("/wishlist").then(r=>setX(r.data));},[]);return <section><h1>Wishlist</h1>{x.map(o=><div className="row" key={o._id}>{o.productId?.name} · {o.productId?.brand}</div>)}</section>}

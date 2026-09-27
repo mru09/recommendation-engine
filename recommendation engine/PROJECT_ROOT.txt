@@ -1,0 +1,8 @@
+PRODUCT RECOMMENDATION ENGINE - HYBRID RAG
+
+This is the project root. The scripts folder is intentionally at this level.
+
+Run from this folder:
+  npm install
+  npm run seed
+  npm run embed:products

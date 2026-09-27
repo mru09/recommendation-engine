@@ -1,0 +1,1 @@
+import React,{useEffect,useState} from "react";import {api} from "../api";export default function Orders(){const [x,setX]=useState([]);useEffect(()=>{api.get("/orders").then(r=>setX(r.data));},[]);return <section><h1>Orders</h1>{x.map(o=><div className="row" key={o._id}>{o.productId?.name} · ₹{o.price} · {new Date(o.orderedAt).toLocaleDateString()}</div>)}</section>}
